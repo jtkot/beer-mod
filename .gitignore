@@ -1,0 +1,10 @@
+# Gradle
+.gradle/
+build/
+bin/
+
+# macOS
+.DS_Store
+
+# Fabric
+run/
