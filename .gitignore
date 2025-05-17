@@ -8,3 +8,9 @@ bin/
 
 # Fabric
 run/
+
+# Eclipse/JDT
+.classpath
+.factorypath
+.project
+.settings/
