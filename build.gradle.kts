@@ -8,13 +8,13 @@ group = property("mod_group") as String
 version = property("mod_version") as String
 
 base {
-	archivesName = project.name
+	archivesName = name
 }
 
 loom {
 	splitEnvironmentSourceSets()
 	mods {
-		create(project.name) {
+		create(name) {
 			sourceSets["main"]
 			sourceSets["client"]
 		}
@@ -36,7 +36,7 @@ dependencies {
 
 tasks.processResources {
 	filesMatching("fabric.mod.json") {
-		expand(mapOf("version" to project.version))
+		expand(mapOf("version" to version))
 	}
 }
 
@@ -52,7 +52,7 @@ java {
 }
 
 tasks.jar {
-	inputs.property("archivesName", project.base.archivesName)
+	inputs.property("archivesName", base.archivesName)
 
 	from("LICENSE") {
 		rename({
@@ -64,7 +64,7 @@ tasks.jar {
 publishing {
 	publications {
 		create<MavenPublication>("mavenJava") {
-			artifactId = project.name
+			artifactId = name
 			from(components["java"])
 		}
 	}
