@@ -1,0 +1,7 @@
+[plugins]
+fabricLoom = { id = "fabric-loom", version = "1.10-SNAPSHOT" }
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version = "1.21.5"}
+fabricLoader = { module = "net.fabricmc:fabric-loader", version = "0.16.14"}
+fabricApi = { module = "net.fabricmc.fabric-api:fabric-api", version = "0.124.0+1.21.5"}
