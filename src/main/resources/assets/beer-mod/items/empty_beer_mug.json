@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "beer-mod:item/empty_beer_mug"
+  }
+}
