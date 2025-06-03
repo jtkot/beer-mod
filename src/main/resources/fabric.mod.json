@@ -5,12 +5,10 @@
 	"name": "Beer Mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Dominik Godek",
+		"Jan Kot",
+		"Kacper Wojtowicz"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
 	"license": "CC0-1.0",
 	"icon": "assets/beer-mod/icon.png",
 	"environment": "*",
@@ -30,8 +28,5 @@
 		"minecraft": "~1.21.5",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
