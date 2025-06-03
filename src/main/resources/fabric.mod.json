@@ -15,12 +15,6 @@
 	"entrypoints": {
 		"main": [
 			"pl.wiadro24.beermc.BeerMod"
-		],
-		"client": [
-			"pl.wiadro24.beermc.BeerModClient"
-		],
-		"fabric-datagen": [
-			"pl.wiadro24.beermc.BeerModDataGenerator"
 		]
 	},
 	"depends": {
