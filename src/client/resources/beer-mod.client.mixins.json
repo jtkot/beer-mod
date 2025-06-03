@@ -3,7 +3,7 @@
 	"package": "pl.wiadro24.beermc.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin"
+		"BeerModClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
