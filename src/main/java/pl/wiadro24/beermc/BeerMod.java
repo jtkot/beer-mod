@@ -15,7 +15,8 @@ public class BeerMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.initialize();	
+		ModItems.initialize();
+		ModBlocks.initialize();
 		LOGGER.debug("Beer Mod initialized");
 	}
 }

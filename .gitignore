@@ -14,3 +14,7 @@ run/
 .factorypath
 .project
 .settings/
+
+# Idea and vscode
+.idea
+.vscode
