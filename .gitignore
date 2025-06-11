@@ -8,6 +8,7 @@ bin/
 
 # Fabric
 run/
+**/generated/
 
 # Eclipse/JDT
 .classpath
@@ -15,6 +16,9 @@ run/
 .project
 .settings/
 
-# Idea and vscode
-.idea
-.vscode
+# IDEA and VSCode
+.idea/
+.vscode/
+
+# Garbage
+.cache/

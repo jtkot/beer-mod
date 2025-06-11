@@ -1,5 +1,6 @@
 {
 	"item.beer-mod.full_beer_mug": "Kufel z piwem",
 	"item.beer-mod.beer_fermentor": "Fermentor do piwa",
-	"item.beer-mod.empty_beer_mug": "Kufel"
+	"item.beer-mod.empty_beer_mug": "Kufel",
+	"entity.minecraft.villager.brewer": "Browarnik"
 }
