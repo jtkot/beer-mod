@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "beer-mod:brewerpoi",
+      "required": false
+    }
+  ]
+}

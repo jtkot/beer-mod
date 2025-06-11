@@ -1,3 +1,4 @@
 {
-	"item.beer-mod.full_beer_mug": "Kufel z piwem"
+	"item.beer-mod.full_beer_mug": "Kufel z piwem",
+	"entity.minecraft.villager.brewer": "Browarnik"	,
 }
