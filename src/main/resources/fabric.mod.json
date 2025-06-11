@@ -15,6 +15,9 @@
 	"entrypoints": {
 		"main": [
 			"pl.wiadro24.beermc.BeerMod"
+		],
+		"fabric-datagen": [
+			"pl.wiadro24.beermc.BeerModDataGenerator"
 		]
 	},
 	"depends": {

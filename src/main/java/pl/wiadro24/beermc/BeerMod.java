@@ -1,9 +1,8 @@
 package pl.wiadro24.beermc;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
-import net.minecraft.village.VillagerProfession;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,11 +20,10 @@ public class BeerMod implements ModInitializer {
 		ModBlocks.initialize();
 		LOGGER.debug("Beer Mod initialized");
 		BrewerProfession.registerVillagers();
-		for (Identifier id : Registries.VILLAGER_PROFESSION.getIds()) {
-			VillagerProfession profession = Registries.VILLAGER_PROFESSION.get(id);
+		for (ResourceLocation id : BuiltInRegistries.VILLAGER_PROFESSION.keySet()) {
 			System.out.println("Registered profession: " + id);
 		}
-		for (Identifier id : Registries.POINT_OF_INTEREST_TYPE.getIds()) {
+		for (ResourceLocation id : BuiltInRegistries.POINT_OF_INTEREST_TYPE.keySet()) {
 			System.out.println("Registered POI: " + id);
 		}
 	}
