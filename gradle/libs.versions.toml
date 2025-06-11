@@ -1,5 +1,6 @@
 [plugins]
 fabricLoom = { id = "fabric-loom", version = "1.10-SNAPSHOT" }
+spotless = { id = "com.diffplug.spotless", version = "7.0.4" }
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version = "1.21.5"}

@@ -2,6 +2,13 @@ plugins {
 	java
 	`maven-publish`
 	alias(libs.plugins.fabricLoom)
+	alias(libs.plugins.spotless)
+}
+
+spotless {
+  java {
+    googleJavaFormat()
+	}
 }
 
 group = property("mod_group") as String
