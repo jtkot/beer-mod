@@ -33,14 +33,13 @@ public class BeerMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		initializeClass(Items.class);
-		initializeClass(Blocks.class);
+		initializeClass(VillagerProfessions.class);
 
 		// Assign items to proper cretive mode tabs
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS)
 				.register(BeerMod::functionalBlocksRegisterer);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(BeerMod::foodAndDrinksRegisterer);
 
-		BrewerProfession.registerVillagers();
 		LOGGER.debug("Beer Mod initialized");
 	}
 }
