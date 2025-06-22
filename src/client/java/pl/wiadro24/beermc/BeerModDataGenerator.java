@@ -8,5 +8,6 @@ public class BeerModDataGenerator implements DataGeneratorEntrypoint {
   public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
     FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
     pack.addProvider(PoiTypeTagsProvider::new);
+    pack.addProvider(ModLootTableProvider::create);
   }
 }
