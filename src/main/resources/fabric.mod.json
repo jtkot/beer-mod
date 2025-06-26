@@ -3,7 +3,7 @@
 	"id": "beer-mod",
 	"version": "${version}",
 	"name": "Beer Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Angels' gift for humanity now available in Minecraft",
 	"authors": [
 		"Dominik Godek",
 		"Jan Kot",
@@ -14,13 +14,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"pl.wiadro24.beermc.BeerMod"
+			"pl.wiadro24.beermc.Mod"
 		],
 		"client": [
-			"pl.wiadro24.beermc.BeerModClient"
+			"pl.wiadro24.beermc.ClientMod"
 		],
 		"fabric-datagen": [
-			"pl.wiadro24.beermc.BeerModDataGenerator"
+			"pl.wiadro24.beermc.datagen.DataGeneratorMod"
 		]
 	},
   "mixins": [

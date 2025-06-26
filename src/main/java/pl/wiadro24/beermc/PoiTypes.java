@@ -1,14 +1,13 @@
 package pl.wiadro24.beermc;
 
-import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
+import net.minecraft.world.level.block.Block;
+import pl.wiadro24.beermc.api.Registerer;
 
 public class PoiTypes {
-  public static final PoiType BREWER =
-      PointOfInterestHelper.register(modPoiTypeLocation("brewer"), 1, 1, Blocks.FERMENTOR);
+	public static final PoiType BREWER = register("brewer", Blocks.FERMENTOR, 1, 1);
 
-  private static ResourceLocation modPoiTypeLocation(String path) {
-    return ResourceLocation.fromNamespaceAndPath(BeerMod.NAMESPACE, path);
-  }
+	private static PoiType register(String name, Block block, int maxTickets, int validRange) {
+		return Registerer.registerPoiType(Mod.NAMESPACE.createPoiTypeKey(name), block, maxTickets, validRange);
+	}
 }
