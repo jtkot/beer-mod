@@ -10,9 +10,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import pl.wiadro24.beermc.api.Registerer;
 
 public class Blocks {
-  public static final Block FERMENTOR =
+  public static final Block BREWING_VAT =
       register(
-          "beer_fermentor",
+          "brewing_vat",
           CreativeModeTabs.FUNCTIONAL_BLOCKS,
           BlockBehaviour.Properties.of().sound(SoundType.ANVIL).noOcclusion());
 

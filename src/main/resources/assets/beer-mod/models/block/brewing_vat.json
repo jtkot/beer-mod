@@ -1,8 +1,8 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Zofia Jedlińska",
 	"texture_size": [128, 128],
 	"textures": {
-		"1": "beer-mod:block/beer_fermentor"
+		"1": "beer-mod:block/brewing_vat"
 	},
 	"elements": [
 		{

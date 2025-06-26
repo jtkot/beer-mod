@@ -9,7 +9,7 @@ import net.minecraft.world.item.Item;
 import pl.wiadro24.beermc.api.Registerer;
 
 public class Items {
-  public static final Item FERMENTOR_ITEM = Blocks.FERMENTOR.asItem();
+  public static final Item BREWING_VAT = Blocks.BREWING_VAT.asItem();
   public static final Item EMPTY_BEER_MUG =
       register("empty_beer_mug", CreativeModeTabs.TOOLS_AND_UTILITIES, BeerMugItem::new);
   public static final Item FULL_BEER_MUG =

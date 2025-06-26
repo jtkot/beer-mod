@@ -16,7 +16,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import pl.wiadro24.beermc.Blocks;
 
 public class BlockLootProvider extends BlockLootSubProvider {
-  private static final ImmutableSet<Block> modBlocks = ImmutableSet.of(Blocks.FERMENTOR);
+  private static final ImmutableSet<Block> modBlocks = ImmutableSet.of(Blocks.BREWING_VAT);
   private static final Set<Item> EXPLOSION_RESISTANT = ImmutableSet.of();
 
   public BlockLootProvider(HolderLookup.Provider provider) {
@@ -25,7 +25,7 @@ public class BlockLootProvider extends BlockLootSubProvider {
 
   @Override
   public void generate() {
-    this.dropSelf(Blocks.FERMENTOR);
+    this.dropSelf(Blocks.BREWING_VAT);
   }
 
   @Override

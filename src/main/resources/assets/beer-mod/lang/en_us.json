@@ -1,5 +1,5 @@
 {
-  "item.beer-mod.full_beer_mug": "Beer mug",
-  "item.beer-mod.beer_fermentor": "Beer fermentor"
-
+  "block.beer-mod.brewing_vat": "Brewing vat",
+  "item.beer-mod.empty_beer_mug": "Mug",
+  "item.beer-mod.full_beer_mug": "Beer mug"
 }
