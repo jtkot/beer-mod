@@ -23,6 +23,9 @@
 			"pl.wiadro24.beermc.BeerModDataGenerator"
 		]
 	},
+  "mixins": [
+		"beer-mod.mixins.json"
+  ],
 	"depends": {
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.5",

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "pl.wiadro24.beermc.api.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PoiTypesMixin",
+    "CreativeModeTabsMixin",
+    "VillagerProfessionMixin",
+    "EntityTypeMixin",
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
