@@ -11,14 +11,14 @@ import pl.wiadro24.beermc.PoiTypes;
 import pl.wiadro24.beermc.api.Registerer;
 
 public class PoiTypeTags extends TagsProvider<PoiType> {
-	public PoiTypeTags(
-			PackOutput packOutput, CompletableFuture<HolderLookup.Provider> completableFuture) {
-		super(packOutput, Registries.POINT_OF_INTEREST_TYPE, completableFuture);
-	}
+  public PoiTypeTags(
+      PackOutput packOutput, CompletableFuture<HolderLookup.Provider> completableFuture) {
+    super(packOutput, Registries.POINT_OF_INTEREST_TYPE, completableFuture);
+  }
 
-	@Override
-	protected void addTags(Provider provider) {
-		this.tag(net.minecraft.tags.PoiTypeTags.ACQUIRABLE_JOB_SITE)
-				.add(Registerer.getKeyForPoiType(PoiTypes.BREWER));
-	}
+  @Override
+  protected void addTags(Provider provider) {
+    this.tag(net.minecraft.tags.PoiTypeTags.ACQUIRABLE_JOB_SITE)
+        .add(Registerer.getKeyForPoiType(PoiTypes.BREWER));
+  }
 }

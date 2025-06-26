@@ -5,9 +5,10 @@ import net.minecraft.world.level.block.Block;
 import pl.wiadro24.beermc.api.Registerer;
 
 public class PoiTypes {
-	public static final PoiType BREWER = register("brewer", Blocks.FERMENTOR, 1, 1);
+  public static final PoiType BREWER = register("brewer", Blocks.FERMENTOR, 1, 1);
 
-	private static PoiType register(String name, Block block, int maxTickets, int validRange) {
-		return Registerer.registerPoiType(Mod.NAMESPACE.createPoiTypeKey(name), block, maxTickets, validRange);
-	}
+  private static PoiType register(String name, Block block, int maxTickets, int validRange) {
+    return Registerer.registerPoiType(
+        Mod.NAMESPACE.createPoiTypeKey(name), block, maxTickets, validRange);
+  }
 }

@@ -16,43 +16,43 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import pl.wiadro24.beermc.Blocks;
 
 public class BlockLootProvider extends BlockLootSubProvider {
-	private static final ImmutableSet<Block> modBlocks = ImmutableSet.of(Blocks.FERMENTOR);
-	private static final Set<Item> EXPLOSION_RESISTANT = ImmutableSet.of();
+  private static final ImmutableSet<Block> modBlocks = ImmutableSet.of(Blocks.FERMENTOR);
+  private static final Set<Item> EXPLOSION_RESISTANT = ImmutableSet.of();
 
-	public BlockLootProvider(HolderLookup.Provider provider) {
-		super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
-	}
+  public BlockLootProvider(HolderLookup.Provider provider) {
+    super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
+  }
 
-	@Override
-	public void generate() {
-		this.dropSelf(Blocks.FERMENTOR);
-	}
+  @Override
+  public void generate() {
+    this.dropSelf(Blocks.FERMENTOR);
+  }
 
-	@Override
-	public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> biConsumer) {
-		this.generate();
-		Set<ResourceKey<LootTable>> set = new HashSet<>();
-		for (Block block : modBlocks) {
-			if (block.isEnabled(this.enabledFeatures)) {
-				block
-						.getLootTable()
-						.ifPresent(
-								resourceKey -> {
-									if (set.add(resourceKey)) {
-										LootTable.Builder builder = (LootTable.Builder) this.map.remove(resourceKey);
-										if (builder == null) {
-											throw new IllegalStateException(
-													String.format(
-															Locale.ROOT,
-															"Missing loottable '%s' for '%s'",
-															resourceKey.location(),
-															BuiltInRegistries.BLOCK.getKey(block)));
-										}
+  @Override
+  public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> biConsumer) {
+    this.generate();
+    Set<ResourceKey<LootTable>> set = new HashSet<>();
+    for (Block block : modBlocks) {
+      if (block.isEnabled(this.enabledFeatures)) {
+        block
+            .getLootTable()
+            .ifPresent(
+                resourceKey -> {
+                  if (set.add(resourceKey)) {
+                    LootTable.Builder builder = (LootTable.Builder) this.map.remove(resourceKey);
+                    if (builder == null) {
+                      throw new IllegalStateException(
+                          String.format(
+                              Locale.ROOT,
+                              "Missing loottable '%s' for '%s'",
+                              resourceKey.location(),
+                              BuiltInRegistries.BLOCK.getKey(block)));
+                    }
 
-										biConsumer.accept(resourceKey, builder);
-									}
-								});
-			}
-		}
-	}
+                    biConsumer.accept(resourceKey, builder);
+                  }
+                });
+      }
+    }
+  }
 }
